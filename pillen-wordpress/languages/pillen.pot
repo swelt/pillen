@@ -1,0 +1,99 @@
+# Copyright (C) 2025 Pillen Database
+# This file is distributed under the GPL v3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pillen Database 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/swelt/pillen/issues\n"
+"POT-Creation-Date: 2025-01-05 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: pillen.php
+msgid "Pillen"
+msgstr ""
+
+msgid "Das kolorimetrische Verzeichnis kleiner Pillen"
+msgstr ""
+
+msgid "Inhalt"
+msgstr ""
+
+msgid "Bruchrille"
+msgstr ""
+
+msgid "Datum"
+msgstr ""
+
+msgid "Dicke"
+msgstr ""
+
+msgid "Durchmesser"
+msgstr ""
+
+msgid "Ort"
+msgstr ""
+
+msgid "Quelle"
+msgstr ""
+
+msgid "Ja"
+msgstr ""
+
+msgid "Nein"
+msgstr ""
+
+msgid "Hallo! Dies ist eine Tour in drei Schritten."
+msgstr ""
+
+msgid "Um Pillen zu filtern, kannst du eine Farbe auswählen."
+msgstr ""
+
+msgid "Schwarz ist besonders. Schwarz bedeutet alle."
+msgstr ""
+
+msgid "Du kannst auch nach Symbolnamen suchen."
+msgstr ""
+
+msgid "Aber beachte: Die ausgewählte Farbe filtert weiterhin!"
+msgstr ""
+
+msgid "Willst du mehr? Klicke auf eine Pille."
+msgstr ""
+
+msgid "Jetzt weißt du alles. Viel Spaß!"
+msgstr ""
+
+msgid "Danksagungen:"
+msgstr ""
+
+msgid "Entwickelt von <a href=\"https://twitter.com/vied12\" target=\"_blank\">Édouard</a> aus einer brillanten Idee von <a href=\"https://twitter.com/annelisebouyer\" target=\"_blank\">Anne-Lise</a><br/>und mit der nützlichen Beratung von <a href=\"https://twitter.com/sm_kraus\" target=\"_blank\">Sebastian</a> und <a href=\"https://twitter.com/olivier_chardin\" target=\"_blank\">Olivier</a>."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Einstellungen"
+msgstr ""
+
+msgid "Pillen importieren"
+msgstr ""
+
+msgid "JSON-Datei importieren"
+msgstr ""
+
+msgid "Jetzt importieren"
+msgstr ""
+
+msgid "Bestehende Daten importieren"
+msgstr ""
+
+msgid "%d Pillen erfolgreich importiert."
+msgstr ""
+
+msgid "%d Fehler aufgetreten."
+msgstr ""
