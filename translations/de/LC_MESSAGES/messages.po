@@ -19,11 +19,11 @@ msgstr ""
 
 #: templates/base.html:13
 msgid "Pillen"
-msgstr ""
+msgstr "Pillen"
 
 #: templates/home.html:6
 msgid "The colorimetric repository of little pills"
-msgstr ""
+msgstr "Das kolorimetrische Verzeichnis kleiner Pillen"
 
 #: templates/home.html:17
 msgid ""
@@ -39,6 +39,17 @@ msgid ""
 "target=\"_blank\">Olivier</a>.\n"
 "\t\t"
 msgstr ""
+"Danksagungen:\n"
+"\t\tEntwickelt von <a href=\"https://twitter.com/vied12\" "
+"target=\"_blank\">Édouard</a>\n"
+"\t\taus einer brillanten Idee von <a "
+"href=\"https://twitter.com/annelisebouyer\" target=\"_blank\">Anne-"
+"Lise</a><br/>\n"
+"\t\tund mit der nützlichen Beratung von <a href=\"https://twitter.com/sm_kraus\" "
+"target=\"_blank\">Sebastian</a> und <a "
+"href=\"https://twitter.com/olivier_chardin\" "
+"target=\"_blank\">Olivier</a>.\n"
+"\t\t"
 
 #: templates/home.html:24
 msgid "Source"
@@ -46,7 +57,7 @@ msgstr "Quelle"
 
 #: templates/home.html:28
 msgid "Give us feedback and grab the code"
-msgstr ""
+msgstr "Gib uns Feedback und hol dir den Code"
 
 #: templates/navigation.html:24
 msgid "Composition"
@@ -80,6 +91,11 @@ msgid ""
 "    <p>Black is special. Black means all.</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>Hallo! Dies ist eine Tour in drei Schritten.</p>\n"
+"    <p>Um Pillen zu filtern, kannst du eine Farbe auswählen.</p>\n"
+"    <p>Schwarz ist besonders. Schwarz bedeutet alle.</p>\n"
+"    "
 
 #: templates/navigation.html:68
 msgid ""
@@ -88,6 +104,10 @@ msgid ""
 "    <p>But keep in mind the selected color is still filtering !</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>Du kannst auch nach Symbolnamen suchen.</p>\n"
+"    <p>Aber beachte: Die ausgewählte Farbe filtert weiterhin!</p>\n"
+"    "
 
 #: templates/navigation.html:74
 msgid ""
@@ -96,6 +116,10 @@ msgid ""
 "    <p>Now you now everything. Have a nice party.</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>Willst du mehr? Klicke auf eine Pille.</p>\n"
+"    <p>Jetzt weißt du alles. Viel Spaß!</p>\n"
+"    "
 
 #~ msgid ""
 #~ "\n"
