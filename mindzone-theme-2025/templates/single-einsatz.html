@@ -1,0 +1,52 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+    <!-- wp:post-title /-->
+
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+    <div class="wp-block-group">
+        <!-- wp:post-date {"format":"d.m.Y"} /-->
+        <!-- wp:html -->
+        <?php
+        // Event Meta: Ort, Kategorie
+        $terms = get_the_terms(get_the_ID(), 'region');
+        if ($terms && !is_wp_error($terms)) {
+            echo '<span class="event-location">📍 ' . esc_html($terms[0]->name) . '</span>';
+        }
+
+        $cats = get_the_terms(get_the_ID(), 'event_kategorie');
+        if ($cats && !is_wp_error($cats)) {
+            echo '<span class="event-category">🎪 ' . esc_html($cats[0]->name) . '</span>';
+        }
+        ?>
+        <!-- /wp:html -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-featured-image /-->
+
+    <!-- wp:post-content /-->
+
+    <!-- wp:separator /-->
+
+    <!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+        <!-- wp:heading {"level":3} -->
+        <h3>Weitere Einsätze</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"einsatz","order":"desc","orderBy":"date","exclude":[get_the_ID()]}} -->
+        <div class="wp-block-query">
+            <!-- wp:post-template -->
+                <!-- wp:post-title {"isLink":true,"fontSize":"large"} /-->
+                <!-- wp:post-date /-->
+            <!-- /wp:post-template -->
+        </div>
+        <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

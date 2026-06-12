@@ -1,0 +1,45 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+    <!-- wp:post-title /-->
+
+    <!-- wp:post-date /-->
+
+    <!-- wp:post-featured-image /-->
+
+    <!-- wp:html -->
+    <?php
+    // Audio Player (PodPress oder Custom Field)
+    $audio_url = get_post_meta(get_the_ID(), 'podcast_audio_url', true);
+    if ($audio_url) {
+        echo '<div class="podcast-player">';
+        echo '<audio controls style="width:100%;">';
+        echo '<source src="' . esc_url($audio_url) . '" type="audio/mpeg">';
+        echo 'Your browser does not support the audio element.';
+        echo '</audio>';
+        echo '</div>';
+    }
+    ?>
+    <!-- /wp:html -->
+
+    <!-- wp:post-content /-->
+
+    <!-- wp:separator /-->
+
+    <!-- wp:heading {"level":3} -->
+    <h3>📻 Weitere Episoden</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:query {"queryId":1,"query":{"perPage":5,"pages":0,"offset":0,"postType":"podcast","order":"desc","orderBy":"date","exclude":[get_the_ID()]}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template -->
+            <!-- wp:post-title {"isLink":true} /-->
+            <!-- wp:post-date /-->
+        <!-- /wp:post-template -->
+    </div>
+    <!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
