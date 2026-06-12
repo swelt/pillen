@@ -66,7 +66,7 @@ function mindzone_register_taxonomies() {
     ));
 
     // 4. REGION/ORT (Location)
-    register_taxonomy('region', array('substanzwarnung', 'einsatz'), array(
+    register_taxonomy('region', array('substanzwarnung', 'einsatz', 'standort'), array(
         'labels' => array(
             'name' => __('Regionen', 'mindzone'),
             'singular_name' => __('Region', 'mindzone'),
@@ -120,6 +120,51 @@ function mindzone_register_taxonomies() {
         'show_admin_column' => true,
         'rewrite' => array('slug' => 'video-kategorie'),
     ));
+
+    // 8. PROJEKT-KATEGORIE (Project/Campaign Type)
+    register_taxonomy('projekt_kategorie', 'projekt', array(
+        'labels' => array(
+            'name' => __('Projekt-Kategorien', 'mindzone'),
+            'singular_name' => __('Projekt-Kategorie', 'mindzone'),
+            'search_items' => __('Kategorien durchsuchen', 'mindzone'),
+            'all_items' => __('Alle Kategorien', 'mindzone'),
+        ),
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'rewrite' => array('slug' => 'projekt-kategorie'),
+    ));
+
+    // 9. INFOMATERIAL-TYP (Material Type - Flyer, Poster, Broschüre, etc.)
+    register_taxonomy('material_typ', 'infomaterial', array(
+        'labels' => array(
+            'name' => __('Material-Typen', 'mindzone'),
+            'singular_name' => __('Material-Typ', 'mindzone'),
+            'search_items' => __('Typen durchsuchen', 'mindzone'),
+            'all_items' => __('Alle Typen', 'mindzone'),
+        ),
+        'hierarchical' => false,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'rewrite' => array('slug' => 'material-typ'),
+    ));
+
+    // 10. ZIELGRUPPE (Target Audience)
+    register_taxonomy('zielgruppe', array('infomaterial', 'projekt'), array(
+        'labels' => array(
+            'name' => __('Zielgruppen', 'mindzone'),
+            'singular_name' => __('Zielgruppe', 'mindzone'),
+            'search_items' => __('Zielgruppen durchsuchen', 'mindzone'),
+            'all_items' => __('Alle Zielgruppen', 'mindzone'),
+        ),
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'rewrite' => array('slug' => 'zielgruppe'),
+    ));
 }
 add_action('init', 'mindzone_register_taxonomies');
 
@@ -164,6 +209,64 @@ function mindzone_add_default_terms() {
     foreach ($substanzklassen as $klasse) {
         if (!term_exists($klasse, 'substanzklasse')) {
             wp_insert_term($klasse, 'substanzklasse');
+        }
+    }
+
+    // Projekt-Kategorien
+    $projekt_cats = array(
+        'Kampagne',
+        'Poster',
+        'Schulungsmaterial',
+        'Aufklärung',
+        'Inklusion',
+    );
+    foreach ($projekt_cats as $cat) {
+        if (!term_exists($cat, 'projekt_kategorie')) {
+            wp_insert_term($cat, 'projekt_kategorie');
+        }
+    }
+
+    // Material-Typen
+    $material_typen = array(
+        'Flyer',
+        'Poster',
+        'Broschüre',
+        'Infokarte',
+        'Sticker',
+        'Handout',
+    );
+    foreach ($material_typen as $typ) {
+        if (!term_exists($typ, 'material_typ')) {
+            wp_insert_term($typ, 'material_typ');
+        }
+    }
+
+    // Zielgruppen
+    $zielgruppen = array(
+        'Feiernde',
+        'Pädagog:innen',
+        'Eltern',
+        'Multiplikator:innen',
+        'Peers',
+    );
+    foreach ($zielgruppen as $gruppe) {
+        if (!term_exists($gruppe, 'zielgruppe')) {
+            wp_insert_term($gruppe, 'zielgruppe');
+        }
+    }
+
+    // Regionen (Bayern)
+    $regionen = array(
+        'München',
+        'Nürnberg',
+        'Augsburg',
+        'Regensburg',
+        'Würzburg',
+        'Ingolstadt',
+    );
+    foreach ($regionen as $region) {
+        if (!term_exists($region, 'region')) {
+            wp_insert_term($region, 'region');
         }
     }
 }

@@ -149,3 +149,51 @@ msgstr ""
 #: inc/taxonomies.php
 msgid "Video-Kategorien"
 msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Projekte"
+msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Projekt"
+msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Standorte"
+msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Standort"
+msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Infomaterialien"
+msgstr ""
+
+#: inc/custom-post-types.php
+msgid "Infomaterial"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Projekt-Kategorien"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Projekt-Kategorie"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Material-Typen"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Material-Typ"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Zielgruppen"
+msgstr ""
+
+#: inc/taxonomies.php
+msgid "Zielgruppe"
+msgstr ""

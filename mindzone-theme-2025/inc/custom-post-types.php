@@ -135,6 +135,79 @@ function mindzone_register_post_types() {
         'show_in_menu' => true,
         'menu_position' => 9,
     ));
+
+    // 6. PROJEKTE (Campaigns/Sub-Projects)
+    register_post_type('projekt', array(
+        'labels' => array(
+            'name' => __('Projekte', 'mindzone'),
+            'singular_name' => __('Projekt', 'mindzone'),
+            'add_new' => __('Neues Projekt', 'mindzone'),
+            'add_new_item' => __('Neues Projekt hinzufügen', 'mindzone'),
+            'edit_item' => __('Projekt bearbeiten', 'mindzone'),
+            'new_item' => __('Neues Projekt', 'mindzone'),
+            'view_item' => __('Projekt ansehen', 'mindzone'),
+            'search_items' => __('Projekte durchsuchen', 'mindzone'),
+            'not_found' => __('Keine Projekte gefunden', 'mindzone'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-megaphone',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'page-attributes'),
+        'rewrite' => array('slug' => 'projekte'),
+        'capability_type' => 'page',
+        'hierarchical' => true,
+        'show_in_menu' => true,
+        'menu_position' => 10,
+    ));
+
+    // 7. STANDORTE (Locations with Peer Teams)
+    register_post_type('standort', array(
+        'labels' => array(
+            'name' => __('Standorte', 'mindzone'),
+            'singular_name' => __('Standort', 'mindzone'),
+            'add_new' => __('Neuer Standort', 'mindzone'),
+            'add_new_item' => __('Neuen Standort hinzufügen', 'mindzone'),
+            'edit_item' => __('Standort bearbeiten', 'mindzone'),
+            'new_item' => __('Neuer Standort', 'mindzone'),
+            'view_item' => __('Standort ansehen', 'mindzone'),
+            'search_items' => __('Standorte durchsuchen', 'mindzone'),
+            'not_found' => __('Keine Standorte gefunden', 'mindzone'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-location',
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'rewrite' => array('slug' => 'standorte'),
+        'capability_type' => 'post',
+        'show_in_menu' => true,
+        'menu_position' => 11,
+    ));
+
+    // 8. INFOMATERIALIEN (Downloadable PDFs + Order System)
+    register_post_type('infomaterial', array(
+        'labels' => array(
+            'name' => __('Infomaterialien', 'mindzone'),
+            'singular_name' => __('Infomaterial', 'mindzone'),
+            'add_new' => __('Neues Material', 'mindzone'),
+            'add_new_item' => __('Neues Infomaterial hinzufügen', 'mindzone'),
+            'edit_item' => __('Infomaterial bearbeiten', 'mindzone'),
+            'new_item' => __('Neues Material', 'mindzone'),
+            'view_item' => __('Material ansehen', 'mindzone'),
+            'search_items' => __('Materialien durchsuchen', 'mindzone'),
+            'not_found' => __('Keine Materialien gefunden', 'mindzone'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-media-document',
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'rewrite' => array('slug' => 'infomaterialien'),
+        'capability_type' => 'post',
+        'show_in_menu' => true,
+        'menu_position' => 12,
+    ));
 }
 add_action('init', 'mindzone_register_post_types');
 
