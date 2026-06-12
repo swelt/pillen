@@ -12,18 +12,18 @@
       "palette": [
         {
           "slug": "primary",
-          "color": "#FF6B35",
-          "name": "Mindzone Orange"
+          "color": "#4aa8b5",
+          "name": "Mindzone Türkis"
         },
         {
           "slug": "secondary",
-          "color": "#004E89",
-          "name": "Mindzone Blue"
+          "color": "#1b3039",
+          "name": "Mindzone Dunkel"
         },
         {
           "slug": "accent",
-          "color": "#F77F00",
-          "name": "Warning Orange"
+          "color": "#4aa8b5",
+          "name": "Türkis Akzent"
         },
         {
           "slug": "success",
@@ -36,19 +36,29 @@
           "name": "Danger Red"
         },
         {
+          "slug": "warning",
+          "color": "#F77F00",
+          "name": "Warning Orange"
+        },
+        {
           "slug": "dark",
-          "color": "#1A1A1A",
-          "name": "Dark"
+          "color": "#1b3039",
+          "name": "Dark Header/Footer"
         },
         {
           "slug": "light",
           "color": "#F8F9FA",
-          "name": "Light"
+          "name": "Light Background"
         },
         {
           "slug": "white",
           "color": "#FFFFFF",
           "name": "White"
+        },
+        {
+          "slug": "black",
+          "color": "#000000",
+          "name": "Black"
         }
       ],
       "gradients": [
@@ -66,14 +76,14 @@
     "typography": {
       "fontFamilies": [
         {
+          "fontFamily": "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+          "slug": "roboto",
+          "name": "Roboto"
+        },
+        {
           "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
           "slug": "system",
           "name": "System Font"
-        },
-        {
-          "fontFamily": "'Inter', sans-serif",
-          "slug": "inter",
-          "name": "Inter"
         }
       ],
       "fontSizes": [
@@ -162,7 +172,7 @@
       "text": "var(--wp--preset--color--dark)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--system)",
+      "fontFamily": "var(--wp--preset--font-family--roboto)",
       "fontSize": "var(--wp--preset--font-size--medium)",
       "lineHeight": "1.6"
     },
